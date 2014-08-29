@@ -1,0 +1,11 @@
+appid: 839303239
+web_health: true
+web_health_conf: 
+    path: /
+    timeout: 500ms
+    success: [200,201,403,301,302]
+try_restart: 
+    enable: true
+    fall: 10
+packages: [bcryptjs,body-parser,bookshelf,busboy,colors,compression,connect,connect-slashes,cookie-parser,downsize,express,express-hbs,express-session,fs-extra,html-to-text,knex,lodash,moment,morgan,node-polyglot,node-uuid,nodemailer,oauth2orize,passport,passport-http-bearer,passport-oauth2-client-password,rss,semver,showdown,sqlite3,static-favicon,unidecode,validator,when,xml,mysql]
+start: $NODEJS $USER_DIR/app/index.js
